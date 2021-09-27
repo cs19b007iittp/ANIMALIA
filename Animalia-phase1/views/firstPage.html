@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ANIMALIA</title>
+  <!-- to import google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Rancho&display=swap" rel="stylesheet">
+  <!-- to get styles sheet and add bootstrap -->
+  <link rel="stylesheet" href="css/firstPage.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body style="background: #E5E5E5">
+    <div class="sidenav">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="images/species1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="images/species2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="images/species3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/species4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/species5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/species6.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/species7.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/species8.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/species9.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/species10.jpg" style="width:100%">
+            </div>
+
+        </div>
+    </div>
+    <div class="main">
+        <h2 style="font-size: 70px;">ANIMALIA</h2>
+        <h4 style="font-size: 40px; padding-left: 15%;">-into the jungle</h4>
+        <br><br>
+        <p>Over the last 150 years, the tigers' range has shrunk by nearly 95% &#x1F61F; Protecting wildlife is vital for present as well as for future generations! Let's preserve the wildlife!</p>
+        <br><br>
+        <button type="signin" class="button">SIGN IN NOW</button>
+        <br><br>
+        <a href="/nosignin/homepage"><button type="nosignin" class="button">CONTINUE WITHOUT SIGNING IN</button></a>
+    </div>
+
+    <script>
+
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+</body>
+</html>
