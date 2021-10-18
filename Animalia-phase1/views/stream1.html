@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ANIMALIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stream1.css">
+  <link rel="icon" href="/css/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style media="screen">
+    .container {
+      position: relative;
+      width: 100%;
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: #008CBA;
+    }
+
+    .container:hover .overlay {
+      opacity: 1;
+    }
+
+    .text1 {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 20%;
+      left: 31%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: left;
+    }
+    .text2 {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 35%;
+      left: 28%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .text3 {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 37%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .text4 {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 65%;
+      left: 34%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="center-line">
+      <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+    </div>
+    <div class="row row-1">
+      <section>
+        <i class="icon fas fa-home"></i>
+        <div class="details">
+          <span class="title">Panthera Tigris</span>
+          <span>6st May 2021</span>
+        </div>
+
+        <div class="container">
+          <img src="images/panthera_tigris.jpg" alt="Avatar" class="image">
+          <div class="overlay">
+            <div class="text1"><span style="color: orange;">Name:</span> Panthera Tigris</div>
+            <div class="text2"><span style="color: orange;">Phylum:</span> Mammalia</div>
+            <div class="text3"><span style="color: orange;">Current status:</span> Endangered</div>
+            <div class="text4"><span style="color: orange;">Last seen:</span> Seshachalam</div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="bottom">
+          <!-- <a href="#">Read more</a> -->
+          <button id="modalBtn" class="button">More information</button>
+
+          <div id="simpleModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="closeBtn">&times;</span>
+                <h2>Panthera Tigris</h2>
+              </div>
+              <div class="modal-body">
+                <p>As we near 2022, the world’s attention has never been more focused on tigers. 2022, also known as the Year of the Tiger in the Chinese Lunar calendar, is expected to be a critical juncture on the road ahead for tiger conservation. The last Year of the Tiger, in 2010, brought forth a global commitment to double the world's tigers, known as Tx2, and the world's most ambitious recovery effort ever taken for a single species.</p>
+                <p>Governments in Southeast Asia have a chance to reverse declining tiger numbers by endorsing a new Southeast Asia Tiger Recovery Action Plan. Rebuilding wild tiger populations can be done. With the full support of communities, governments, the private sector, and conservation partners, threats against tigers can be eliminated. Otherwise, this iconic big cat will remain under threat well beyond 2022.</p>
+              </div>
+              <div class="modal-footer">
+                <h3>Protect BIG CATS</h3>
+              </div>
+            </div>
+          </div>
+
+          <i>- THE TIMES OF INDIA</i>
+        </div>
+      </section>
+    </div>
+    <div class="row row-2">
+      <section>
+        <i class="icon fas fa-star"></i>
+        <div class="details">
+          <span class="title">Title of Section 2</span>
+          <span>2nd Jan 2021</span>
+        </div>
+        <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores, sint eos vero sapiente voluptas debitis dicta dolore.</p>
+        <div class="bottom">
+          <a href="#">Read more</a>
+          <i>- Someone famous</i>
+        </div>
+      </section>
+    </div>
+    <div class="row row-1">
+      <section>
+        <i class="icon fas fa-rocket"></i>
+        <div class="details">
+          <span class="title">Title of Section 3</span>
+          <span>3rd Jan 2021</span>
+        </div>
+        <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores, sint eos vero sapiente voluptas debitis dicta dolore.</p>
+        <div class="bottom">
+          <a href="#">Read more</a>
+          <i>- Someone famous</i>
+        </div>
+      </section>
+    </div>
+    <div class="row row-2">
+      <section>
+        <i class="icon fas fa-globe"></i>
+        <div class="details">
+          <span class="title">Title of Section 4</span>
+          <span>4th Jan 2021</span>
+        </div>
+        <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores, sint eos vero sapiente voluptas debitis dicta dolore.</p>
+        <div class="bottom">
+          <a href="#">Read more</a>
+          <i>- Someone famous</i>
+        </div>
+      </section>
+    </div>
+    <div class="row row-1">
+      <section>
+        <i class="icon fas fa-paper-plane"></i>
+        <div class="details">
+          <span class="title">Title of Section 5</span>
+          <span>5th Jan 2021</span>
+        </div>
+        <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores, sint eos vero sapiente voluptas debitis dicta dolore.</p>
+        <div class="bottom">
+          <a href="#">Read more</a>
+          <i>- Someone famous</i>
+        </div>
+      </section>
+    </div>
+    <div class="row row-2">
+      <section>
+        <i class="icon fas fa-map-marker-alt"></i>
+        <div class="details">
+          <span class="title">Title of Section 6</span>
+          <span>6th Jan 2021</span>
+        </div>
+        <p>Lorem ipsum dolor sit ameters consectetur adipisicing elit. Sed qui veroes praesentium maiores, sint eos vero sapiente voluptas debitis dicta dolore.</p>
+        <div class="bottom">
+          <a href="#">Read more</a>
+          <i>- Someone famous</i>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
