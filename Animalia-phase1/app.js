@@ -57,6 +57,33 @@ app.get('/nosignin/homepage/andhra_pradesh', function(req, res) {
     res.sendFile(path.join(__dirname, 'views/timeline.html'));
 });
 
+app.get('/nosignin/homepage/andhra_pradesh/stream1', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views/stream1.html'));
+});
+
+
+
+
+app.get('/nosignin/homepage/andhra_pradesh/quiz', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views/quiz.html'));
+});
+
+app.get('/nosignin/homepage/andhra_pradesh/quiz/play', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views/game.html'));
+});
+
+app.get('/nosignin/homepage/andhra_pradesh/quiz/play/end', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views/end.html'));
+});
+
+app.get('/nosignin/homepage/andhra_pradesh/quiz/highscores', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views/highscores.html'));
+});
+
+app.get('/nosignin/homepage/andhra_pradesh/quiz/claim_reward', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views/ar.html'));
+});
+
 // app.use("/nosignin", NosigninRouter);
 
 
