@@ -6,6 +6,9 @@
   <title>ANIMALIA</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="/css/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!--Bonus Button animation -->
   <style media="screen">
     .fcc-btn {
       background-color: #6cd29f;
@@ -23,11 +26,20 @@
 <body>
 
   <div class="main">
+    <!-- Bonus button check and display -->
+    <% if (check === 1) { %>
+    <button class="signinbtn"><a target="_blank" href="/signin/bonus" style="text-decoration:none; color: inherit;">LOGIN BONUS</a></button>
+    <% } %>
     <h1>Welcome to</h1>
     <img src="images/animalia3.gif" alt="" class="gif">
     <div class="nav top-nav">
       <ul>
+        <!-- <li><a href="#" class="nav-link first-link">Home</a></li> -->
+        <% if (check === 1) { %>
+        <p class="username">Hi, <%=user.name %></p>
+        <%} else { %>
         <li><a href="#" class="nav-link first-link">Home</a></li>
+        <% } %>
         <li><img src="images/turtle.png" alt="" class="turtle1"></li>
         <li><img src="images/turtle.png" alt="" class="turtle2"></li>
         <li><img src="images/turtle.png" alt="" class="turtle3"></li>
@@ -36,7 +48,7 @@
     </div>
   </div>
 
-
+  <!-- 5 time period display -->
   <div class="container">
 
     <div class="top-section">
@@ -55,7 +67,7 @@
           <h2>(1971 - 1981)</h2>
           <p>This period marked as the start of animal rights. Animal welfare and rights in India regards the treatment of and laws concerning non-human animals in India</p>
           <br>
-          <a target="_blank" class="fcc-btn" href="/nosignin/homepage/andhra_pradesh/stream1">Select this Time Stream</a>
+          <a href="/nosignin/homepage/andhra_pradesh/stream1"> <button style="padding: 15px;">Show me more</button> </a>
         </div>
         <img src="images/animal_welfare.png" class="img-right">
       </div>
@@ -64,9 +76,10 @@
       <div class="section">
         <div class="bead"></div>
         <div class="content">
-          <h2>Web Development</h2>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage
-            of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+          <h2>(1981 - 1991)</h2>
+          <p>This period marked as the start of animal rights. Animal welfare and rights in India regards the treatment of and laws concerning non-human animals in India</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream2"> <button style="padding: 15px;">Show me more</button> </a>
         </div>
         <img src="images/cool.png" class="img-left">
       </div>
@@ -75,10 +88,10 @@
       <div class="section">
         <div class="bead"></div>
         <div class="content">
-          <h2>Frontend</h2>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a
-            passage
-            of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+          <h2>(1991 - 2001)</h2>
+          <p>This period marked as the start of animal rights. Animal welfare and rights in India regards the treatment of and laws concerning non-human animals in India</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream3"> <button style="padding: 15px;">Show me more</button> </a>
         </div>
         <img src="images/nerd.png" class="img-right">
       </div>
@@ -88,9 +101,10 @@
       <div class="section">
         <div class="bead"></div>
         <div class="content">
-          <h2>Backend</h2>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage
-            of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+          <h2>(2001 - 2011)</h2>
+          <p>This period marked as the start of animal rights. Animal welfare and rights in India regards the treatment of and laws concerning non-human animals in India</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream4"> <button style="padding: 15px;">Show me more</button> </a>
         </div>
         <img src="images/happiness.png" class="img-left">
       </div>
@@ -100,10 +114,11 @@
       <div class="section">
         <div class="bead"></div>
         <div class="content">
-          <h2>SEO optimized</h2>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a
-            passage
-            of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+          <h2>(2011 - 2021)</h2>
+          <p>This period marked as the start of animal rights. Animal welfare and rights in India regards the treatment of and laws concerning non-human animals in India</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream5"> <button style="padding: 15px;">Show me more</button> </a>
+          <!-- class="fcc-btn" -->
         </div>
         <img src="images/shocked.png" class="img-right">
       </div>
@@ -113,8 +128,11 @@
 
     </div>
   </div>
-
+<!-- Java Script file link -->
   <script src="js/timeline.js"></script>
 </body>
 
 </html>
+
+<!-- FIXME: Some additional(empty) space in right -->
+<!-- TODO: Button CSS improvement -->
