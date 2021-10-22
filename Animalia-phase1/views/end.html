@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Congrats!</title>
-    <link rel="stylesheet" href="css/app.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div id="end" class="flex-center flex-column">
-        <h1 id="finalScore">0</h1>
-        <form>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="username"
-          />
-          <button
-            type="submit"
-            class="btn"
-            id="saveScoreBtn"
-            onclick="saveHighScore(event)"
-            disabled
-          >
-            Save
-          </button>
-        </form>
-        <a class="btn" href="/nosignin/homepage/andhra_pradesh/quiz/play">Play Again</a>
-        <a class="btn" href="/nosignin/homepage/andhra_pradesh/quiz">Go Home</a>
-        <a target="_blank" class="btn" href="/nosignin/homepage/andhra_pradesh/quiz/claim_reward">Claim Reward</a>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Congrats!</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <!-- Redirect or download marker prompt -->
+  <script>
+    function newDoc() {
+      var ask = window.confirm("Do you want to download HIRO marker? Press 'ok', else 'cancel'");
+      if (ask) {
+        window.open('/downloadmarker', '_blank');
+      } else {
+        window.open('/nosignin/homepage/andhra_pradesh/quiz/claim_reward', '_blank');
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="end" class="flex-center flex-column">
+      <h1 id="finalScore">0</h1>
+      <form>
+        <input type="text" name="username" id="username" placeholder="username" />
+        <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
+          Save
+        </button>
+      </form>
+      <a class="btn" href="/nosignin/homepage/andhra_pradesh/quiz/play">Play Again</a>
+      <a class="btn" href="/nosignin/homepage/andhra_pradesh/quiz">Go Home</a>
+      <a class="btn" onclick="newDoc()" id="check" style="visibility: visible;">Claim Reward</a>
     </div>
-    <script src="js/end.js"></script>
-  </body>
+  </div>
+  <script src="js/end.js"></script>
+</body>
+
 </html>
+
+<!-- TODO: Stop taking username in case of signed in users -->
+<!-- TODO: Make quiz reward dsappear for 0 score -->
