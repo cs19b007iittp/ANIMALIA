@@ -9,10 +9,12 @@ const MAX_HIGH_SCORES = 5;
 
 finalScore.innerText = mostRecentScore;
 
+// Do not allow save until entered name
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value;
 });
 
+// Save highscore and take back to quiz home
 saveHighScore = (e) => {
     e.preventDefault();
 
