@@ -13,6 +13,7 @@ let availableQuesions = [];
 
 let questions = [];
 
+// Fetch API for questions
 fetch(
     'https://opentdb.com/api.php?amount=10&category=27&difficulty=easy&type=multiple'
 )
@@ -59,6 +60,7 @@ startGame = () => {
     loader.classList.add('hidden');
 };
 
+// Get new random question from API each time
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
@@ -84,6 +86,7 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
+// Fuction on action on attempting a question
 choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
         if (!acceptingAnswers) return;
@@ -108,6 +111,7 @@ choices.forEach((choice) => {
     });
 });
 
+// Function to keep increment scores on correct answers
 incrementScore = (num) => {
     score += num;
     scoreText.innerText = score;
