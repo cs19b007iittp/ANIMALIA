@@ -13,3 +13,14 @@ Alternative2: Clone the repository to your system and run on http://localhost:30
 3. Make sure too much sunlight doesn't fall on marker(mobile device).
 <img src="https://github.com/BobbaRuthvik/ANIMALIA/blob/master/readme_imgs/WhatsApp%20Image%202021-10-25%20at%2011.34.05%20PM.jpeg" height="300" width="500"/>
 
+
+
+
+
+
+## Project Folder Drive Link
+
+## Demo video Drive Link
+
+## Slide Deck Drive Link
+
