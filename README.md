@@ -10,5 +10,5 @@ Alternative2: Clone the repository to your system and run on http://localhost:30
 1. Keep the screen at an angle of 60-70 degrees to the keyboard.
 2. Download HIRO marker.
 3. Make sure too much sunlight doesn't fall on marker(mobile device).
-<img src="https://github.com/BobbaRuthvik/ANIMALIA/blob/master/readme_imgs/WhatsApp%20Image%202021-10-25%20at%2011.34.05%20PM.jpeg" height="300" width="800"/>
+<img src="https://github.com/BobbaRuthvik/ANIMALIA/blob/master/readme_imgs/WhatsApp%20Image%202021-10-25%20at%2011.34.05%20PM.jpeg" height="300" width="500"/>
 
