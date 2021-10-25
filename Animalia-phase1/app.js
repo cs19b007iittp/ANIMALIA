@@ -67,7 +67,7 @@ app.post('/', (req, res) => {
 app.get('/signin/homepage', checkAuthenticated, (req, res) => {
   user = req.user;
   check = 1;
-  res.render('index', {
+  res.render('state_selection', {
     user,
     check
   });
@@ -87,7 +87,7 @@ app.get('/signin/bonus', checkAuthenticated, (req, res) => {
 
 app.get('/nosignin/homepage', function(req, res) {
   check = 0;
-  res.render('index', {
+  res.render('state_selection', {
     user,
     check
   });
@@ -101,6 +101,11 @@ app.get('/nosignin/homepage/andhra_pradesh', function(req, res) {
 });
 
 // Time streams redirection
+
+app.get('/nosignin/homepage/andhra_pradesh/instructions', function(req, res) {
+  // res.sendFile(path.join(__dirname, 'views/stream1.html'));
+  res.sendFile(path.join(__dirname, 'views/instructionsPage.html'));
+});
 
 app.get('/nosignin/homepage/andhra_pradesh/stream1', function(req, res) {
   // res.sendFile(path.join(__dirname, 'views/stream1.html'));
