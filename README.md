@@ -28,10 +28,14 @@ Alternative2: Clone the repository to your system and run on http://localhost:30
 ## Data Flow
 The first screen gives you an option to choose the sign in part and then the homepage presents you with a set of images that tells you what the app is about.Then user will be able to scroll down to select state and then move on to about us page.Then user enters into timeline page and the user who signs in gets a login bonus where he gets into randomize 3d AR figure.Then the user goes to information page upon clicking some time period.The user can also go to quiz part whenever he wants and there the user is given reward which is also AR based(available for users using phone).
 
+### Github Repository link
+https://github.com/BobbaRuthvik/ANIMALIA
 
-## Project Folder Drive Link
+### Project Folder Drive Link
+https://drive.google.com/drive/folders/1_kTpXWVfrAuR2ztfxIxuopIOCyVOcdTi?usp=sharing
 
-## Demo video Drive Link
+### Demo video Drive Link
+https://drive.google.com/file/d/1NK3ySu6V0qjuGvXizz1ngMvB8Xh-w4IR/view?usp=sharing
 
-## Slide Deck Drive Link
-
+### Slide Deck Drive Link
+https://docs.google.com/presentation/d/1WvVzd6zg5DjvIEY-gx70HJroS8fmQfQpEaJAMksBaow/edit?usp=sharing
