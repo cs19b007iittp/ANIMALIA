@@ -28,6 +28,15 @@ Alternative2: Clone the repository to your system and run on http://localhost:30
 ## Data Flow
 The first screen gives you an option to choose the sign in part and then the homepage presents you with a set of images that tells you what the app is about.Then user will be able to scroll down to select state and then move on to about us page.Then user enters into timeline page and the user who signs in gets a login bonus where he gets into randomize 3d AR figure.Then the user goes to information page upon clicking some time period.The user can also go to quiz part whenever he wants and there the user is given reward which is also AR based(available for users using phone).
 
+
+## Team Members and contributions
+1. B. Greeshmitha		-	UI
+2. Bobba Ruthvik		-	Functionality and Technology
+3. Suman P                         -	Information gathering
+4. Sapparapu Rithika	-	Responsiveness(related to JavaScript)
+Above described are only major contribution roles, but in the need each team member participated in every activity.
+
+
 ### Github Repository link
 https://github.com/BobbaRuthvik/ANIMALIA
 
