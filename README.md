@@ -18,9 +18,14 @@ Alternative2: Clone the repository to your system and run on http://localhost:30
 <img src="https://user-images.githubusercontent.com/73455820/138790367-af3c3862-5c0c-4902-9f7a-d205b8381e84.png" height="300" width="450"/>
 <img src="https://user-images.githubusercontent.com/73455820/138790408-5fbbbe78-0568-4a02-95f2-1155e6bfe524.png" height="300" width="450"/>
 </p>
-5. A quiz related to animals where questions are taken from an external API(for R1). For R2 planning to build a custom questionnaire.
-6. Attempting Quiz gives access to exciting prices.
-7. You will be asked to download HIRO marker, which you can if you do not have it in your mobile.
+4. A quiz related to animals where questions are taken from an external API(for R1). For R2 planning to build a custom questionnaire. <br />
+5. Attempting Quiz gives access to exciting prices.
+<p float="left">
+<img src="https://user-images.githubusercontent.com/73455820/138791008-9e788c7e-e8f3-4501-b214-64d69d8d92e8.png" height="300" width="450"/>
+<img src="https://user-images.githubusercontent.com/73455820/138791145-704ed9b4-1fdb-42b7-99a0-d88b335ec5a9.png" height="300" width="450"/>
+</p>
+6. You will be asked to download HIRO marker, which you can if you do not have it in your mobile.
+<img src="https://user-images.githubusercontent.com/73455820/138791372-7ddf6647-0a2d-4a8a-831d-edaba05f7a4e.png" height="300" width="500"/>
 
 ### AR-related
 1. Keep the screen at an angle of 60-70 degrees to the keyboard.
