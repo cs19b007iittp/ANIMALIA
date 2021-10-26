@@ -9,8 +9,8 @@ Alternative2: Clone the repository to your system and run on http://localhost:30
 ## User guide and Features
 1. User will be given two  options: “Sign in via Google account” or “continue without signing in.”
 2. Both pages take you to the state selection page. Currently only ANDHRA PRADESH is implemented.
-<img src="https://github.com/BobbaRuthvik/ANIMALIA/blob/master/readme_imgs/WhatsApp%20Image%202021-10-25%20at%2011.34.05%20PM.jpeg" height="300" width="500"/>
-<img src="https://github.com/BobbaRuthvik/ANIMALIA/blob/master/readme_imgs/WhatsApp%20Image%202021-10-25%20at%2011.34.05%20PM.jpeg" height="300" width="500"/>
+<img src="https://github.com/BobbaRuthvik/ANIMALIA/blob/master/readme_imgs/WhatsApp%20Image%202021-10-25%20at%2011.34.05%20PM.jpeg" height="100" width="300"/>
+<img src="https://github.com/BobbaRuthvik/ANIMALIA/blob/master/readme_imgs/WhatsApp%20Image%202021-10-25%20at%2011.34.05%20PM.jpeg" height="100" width="300"/>
 4. Now sign in has a Login Bonus which gives you access to a 3d image where you can play
 5. A quiz related to animals where questions are taken from an external API(for R1). For R2 planning to build a custom questionnaire.
 6. Attempting Quiz gives access to exciting prices.
