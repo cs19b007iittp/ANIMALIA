@@ -13,7 +13,11 @@ Alternative2: Clone the repository to your system and run on http://localhost:30
 <img src="https://user-images.githubusercontent.com/73455820/138790180-b021c7a8-7b39-44d8-a60e-f60a7f93bbf4.png" height="300" width="450"/>
 <img src="https://user-images.githubusercontent.com/73455820/138790238-2f40de0a-bdbb-4b6d-b5ea-2c5bba2094f4.png" height="300" width="450"/>
 </p>
-4. Now sign in has a Login Bonus which gives you access to a 3d image where you can play
+3. Now sign in has a Login Bonus which gives you access to a 3d image where you can play
+<p float="left">
+<img src="https://user-images.githubusercontent.com/73455820/138790367-af3c3862-5c0c-4902-9f7a-d205b8381e84.png" height="300" width="450"/>
+<img src="https://user-images.githubusercontent.com/73455820/138790408-5fbbbe78-0568-4a02-95f2-1155e6bfe524.png" height="300" width="450"/>
+</p>
 5. A quiz related to animals where questions are taken from an external API(for R1). For R2 planning to build a custom questionnaire.
 6. Attempting Quiz gives access to exciting prices.
 7. You will be asked to download HIRO marker, which you can if you do not have it in your mobile.
