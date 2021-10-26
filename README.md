@@ -33,7 +33,7 @@ The first screen gives you an option to choose the sign in part and then the hom
 1. B. Greeshmitha		-	UI
 2. Bobba Ruthvik		-	Functionality and Technology
 3. Suman P                         -	Information gathering
-4. Sapparapu Rithika	-	Responsiveness(related to JavaScript)
+4. Sapparapu Rithika	-	Responsiveness(related to JavaScript) <br />
 Above described are only major contribution roles, but in the need each team member participated in every activity.
 
 
