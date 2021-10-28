@@ -4,7 +4,7 @@ This website focuses on the Sustainable Development Goal 14 - Life below Water a
 
 ## Running the applications
 Alternative1: Heroku hosted link- https://animalia-phase1.herokuapp.com/ <br />
-Alternative2: Clone the repository to your system and run on http://localhost:3000/
+Alternative2: Clone the repository to your system and run on http://localhost:3000/ <br />
 NOTE: Sign in will work for heroku link only.(as we can only give google authentication to one site, we chose Alternative-1 for R1).
 
 ## User guide and Features
