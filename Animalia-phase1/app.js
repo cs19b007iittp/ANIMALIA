@@ -11,6 +11,16 @@ var cookieParser = require('cookie-parser')
 // TODO: Routers
 // const NosigninRouter = require("./routes/nosignin_routes.js")
 
+
+// connect with db
+mongoose.connect('mongodb+srv://animalia-team11:1URdYyRpqDEKEuDT@cluster0.txx4c.mongodb.net/test');
+
+mongoose.connection.once('open', function(){
+  console.log('connection has been made');
+}).on('error', function(error){
+  console.log('error is:', error);
+})
+
 // Google Auth section
 const {
   OAuth2Client
