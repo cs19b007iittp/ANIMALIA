@@ -5,21 +5,53 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: white;
-  background-color: #4c4177;
-  background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+  background-color: #5e8b7e;
+  /* background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%); */
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  padding-left: 2%;
+  padding-right: 2%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav-right {
+  float: right;
 }
 
 .main {
-  height: 100vh;
-  background: #6cd29f;
+  position: relative;
   text-align: center;
+  color: white;
+}
+.main .timelineimage {
+  height: 100%;
+  width: 100%;
 }
 
 .main h1 {
-  font-size: 100px;
-  position: relative;
-  top: 30%;
-  transform: translateY(-50%);
+  font-size: 50px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .username {
@@ -33,7 +65,8 @@ body {
   text-align: center;
   background: black;
   left: 0;
-  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .bottom-nav {
@@ -49,7 +82,7 @@ body {
 .nav ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 20px;
+  padding: 10px;
 }
 
 .nav ul li .nav-link {
@@ -121,21 +154,22 @@ body {
   /* padding-top: 0; */
 }
 
-.signinbtn{
-  top: 20%;
+.main .signinbtn {
+  position: absolute;
 }
 
-.signinbtn, .signinbtn::after {
+.signinbtn,
+.signinbtn::after {
   width: 380px;
   height: 86px;
   font-size: 36px;
-  font-family: 'Bebas Neue', cursive;
-  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  font-family: "Bebas Neue", cursive;
+  background: linear-gradient(45deg, transparent 5%, #55081a 5%);
   border: 0;
   color: #fff;
   letter-spacing: 3px;
   line-height: 88px;
-  box-shadow: 6px 0px 0px #00E6F6;
+  box-shadow: 6px 0px 0px #be1414;
   outline: transparent;
   position: relative;
 }
@@ -147,15 +181,21 @@ body {
   --slice-3: inset(10% -6px 85% 0);
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
-  content: 'AVAILABLE NOW';
+  content: "AVAILABLE NOW";
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
-  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    #a10707 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
   clip-path: var(--slice-0);
 }
 
@@ -248,7 +288,7 @@ body {
 .line:after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
@@ -273,7 +313,7 @@ body {
   border-radius: 1rem;
   align-items: center;
   min-height: 300px;
-  background-color: green;
+  background-color: #064420;
 }
 
 .section:nth-child(odd) {
@@ -306,3 +346,39 @@ h1 {
   font-weight: 400;
   letter-spacing: 1px;
 }
+
+.showmorebutton {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 2%;
+  color: #004445;
+  background-color: #fff;
+  border: 2px solid white;
+  border-radius: 2px;
+}
+
+.showmorebutton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: #5e8b7e;
+  border: 2px solid #5e8b7e;
+  border-radius: 2px;
+}
+
+/*
+
+<div class="nav top-nav">
+      <ul>
+        <!-- <li><a href="#" class="nav-link first-link">Home</a></li> -->
+        <% if (check === 1) { %>
+        <p class="username">Hi, <%=user.name %></p>
+        <%} else { %>
+        <li><a href="#" class="nav-link first-link">Home</a></li>
+        <% } %>
+        <li><img src="images/turtle.png" alt="" class="turtle1"></li>
+        <li><img src="images/turtle.png" alt="" class="turtle2"></li>
+        <li><img src="images/turtle.png" alt="" class="turtle3"></li>
+        <li><a target="_blank" href="/nosignin/homepage/andhra_pradesh/quiz" class="nav-link last-link">Quiz</a></li>
+      </ul>
+    </div>
+
+*/
