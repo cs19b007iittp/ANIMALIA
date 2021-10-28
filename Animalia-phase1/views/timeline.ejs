@@ -26,35 +26,34 @@
 <body>
 
   <div class="main">
+
+    <div class="topnav">
+      <% if (check === 1) { %>
+        <p class="username">Hi, <%=user.name %></p>
+        <%} %>
+      <div class="topnav-right">
+        <a href="/nosignin/homepage">HOME</a>
+        <a target="_blank" href="/nosignin/homepage/andhra_pradesh/quiz">QUIZ</a>
+        <a target="_blank" href="/nosignin/homepage/andhra_pradesh/instructions">INSTRUCTIONS</a>
+      </div>
+    </div>
+
+
     <!-- Bonus button check and display -->
     <% if (check === 1) { %>
     <button class="signinbtn"><a target="_blank" href="/signin/bonus" style="text-decoration:none; color: inherit;">LOGIN BONUS</a></button>
     <% } %>
-    <h1>Welcome to</h1>
-    <img src="images/animalia3.gif" alt="" class="gif">
-    <div class="nav top-nav">
-      <ul>
-        <!-- <li><a href="#" class="nav-link first-link">Home</a></li> -->
-        <% if (check === 1) { %>
-        <p class="username">Hi, <%=user.name %></p>
-        <%} else { %>
-        <li><a href="#" class="nav-link first-link">Home</a></li>
-        <% } %>
-        <li><img src="images/turtle.png" alt="" class="turtle1"></li>
-        <li><img src="images/turtle.png" alt="" class="turtle2"></li>
-        <li><img src="images/turtle.png" alt="" class="turtle3"></li>
-        <li><a target="_blank" href="/nosignin/homepage/andhra_pradesh/quiz" class="nav-link last-link">Quiz</a></li>
-      </ul>
-    </div>
+    <img src="images/timelinebg2.jpg" alt="" class="timelineimage">
+    <h1>WELCOME TO AP WILDLIFE!</h1>
+
   </div>
 
   <!-- 5 time period display -->
   <div class="container">
 
     <div class="top-section">
-      <h1>Animated Timeline</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-        book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+      <h1>Wildlife of Andhra Pradesh</h1>
+      <p>The state of Andhra Pradesh is considered one of the rich bio-diversified states in India. Natural vegetation (flora) and animal life (fauna) depend mainly on climate, relief, and soil. Krishna and Godavari are the two largest rivers flowing through the state. The Andhra Pradesh Forest Department deals with protection, conservation and management of forests</p>
     </div>
 
     <div class="timeline">
@@ -67,7 +66,7 @@
           <h2>(1971 - 1981)</h2>
           <p>This period marked as the start of animal rights. Animal welfare and rights in India regards the treatment of and laws concerning non-human animals in India</p>
           <br>
-          <a href="/nosignin/homepage/andhra_pradesh/stream1"> <button style="padding: 15px;">Show me more</button> </a>
+          <a href="/nosignin/homepage/andhra_pradesh/stream1"> <button class="showmorebutton">Show me more!</button> </a>
         </div>
         <img src="images/animal_welfare.png" class="img-right">
       </div>
@@ -77,11 +76,11 @@
         <div class="bead"></div>
         <div class="content">
           <h2>(1981 - 1991)</h2>
-          <p>This period marked as the start of animal rights. Animal welfare and rights in India regards the treatment of and laws concerning non-human animals in India</p>
+          <p>Environmental (Protection) Act(1986), Asian Development Bank Report (1991) and many acts and rights came out during this period.</p>
           <br>
-          <a href="/nosignin/homepage/andhra_pradesh/stream2"> <button style="padding: 15px;">Show me more</button> </a>
+          <a href="/nosignin/homepage/andhra_pradesh/stream2"> <button class="showmorebutton">Show me more!</button> </a>
         </div>
-        <img src="images/cool.png" class="img-left">
+        <img src="images/forest-laws.png" class="img-left" style="width: 20%; height: 20%;">
       </div>
 
 
@@ -89,11 +88,11 @@
         <div class="bead"></div>
         <div class="content">
           <h2>(1991 - 2001)</h2>
-          <p>This period marked as the start of animal rights. Animal welfare and rights in India regards the treatment of and laws concerning non-human animals in India</p>
+          <p>A Wildlife Sanctuary is a protected area of importance for flora, fauna, or features of geological or other interest, which is reserved and managed for conservation and to provide opportunities for study or research.</p>
           <br>
-          <a href="/nosignin/homepage/andhra_pradesh/stream3"> <button style="padding: 15px;">Show me more</button> </a>
+          <a href="/nosignin/homepage/andhra_pradesh/stream3"> <button class="showmorebutton">Show me more!</button> </a>
         </div>
-        <img src="images/nerd.png" class="img-right">
+        <img src="images/animal-sanctuary.png" class="img-right">
       </div>
 
 
@@ -102,11 +101,11 @@
         <div class="bead"></div>
         <div class="content">
           <h2>(2001 - 2011)</h2>
-          <p>This period marked as the start of animal rights. Animal welfare and rights in India regards the treatment of and laws concerning non-human animals in India</p>
+          <p>Papikonda is added to the list of National Park in 2008, similarly Rameswaram in 2005. Both state and central government took active role in wildlife conservation.</p>
           <br>
-          <a href="/nosignin/homepage/andhra_pradesh/stream4"> <button style="padding: 15px;">Show me more</button> </a>
+          <a href="/nosignin/homepage/andhra_pradesh/stream4"> <button class="showmorebutton">Show me more!</button> </a>
         </div>
-        <img src="images/happiness.png" class="img-left">
+        <img src="images/national-park.png" class="img-left" style="width: 20%; height: 20%;">
       </div>
 
 
@@ -115,12 +114,12 @@
         <div class="bead"></div>
         <div class="content">
           <h2>(2011 - 2021)</h2>
-          <p>This period marked as the start of animal rights. Animal welfare and rights in India regards the treatment of and laws concerning non-human animals in India</p>
+          <p>Forest fires are on the rise in the State. More than 15,200 instances have been reported in the last five months. Good rains and wildlife conservation is the only permanent solution.</p>
           <br>
-          <a href="/nosignin/homepage/andhra_pradesh/stream5"> <button style="padding: 15px;">Show me more</button> </a>
+          <a href="/nosignin/homepage/andhra_pradesh/stream5"> <button class="showmorebutton">Show me more!</button> </a>
           <!-- class="fcc-btn" -->
         </div>
-        <img src="images/shocked.png" class="img-right">
+        <img src="images/forest-fire.png" class="img-right">
       </div>
 
 
