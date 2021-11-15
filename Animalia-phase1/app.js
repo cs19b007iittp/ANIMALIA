@@ -6,20 +6,56 @@ const cors = require("cors");
 const path = require("path")
 const mongoose = require('mongoose')
 var cookieParser = require('cookie-parser')
-// TODO: const bcrypt = require("bcrypt");
+
+//variable section
+let user;
+let check;
+let email;
+let id;
+let curr_imagePath;
+let name1 = "Ruthvik";
+let email1 = "ruthvik@gmail.com";
+let imagePath1 = "images/ruthvik.png";
+let imagePath2 = "images/greeshmitha.jpeg";
+let imagePath3 = "images/rithika.jpeg";
+let imagePath4 = "images/suman.jpeg";
 
 // TODO: Routers
 // const NosigninRouter = require("./routes/nosignin_routes.js")
 
+const Customer = require('./models/customer.model')
 
-// connect with db
-mongoose.connect('mongodb+srv://animalia-team11:1URdYyRpqDEKEuDT@cluster0.txx4c.mongodb.net/test');
+//middleware section
+app.set(cors());
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(cookieParser());
+app.set('view engine', 'ejs');
 
-mongoose.connection.once('open', function(){
+
+//connect with db
+mongoose.connect('mongodb+srv://animalia-team11:1URdYyRpqDEKEuDT@cluster0.txx4c.mongodb.net/test', {useNewUrlParser: true});
+
+mongoose.connection.once('open', function() {
   console.log('connection has been made');
-}).on('error', function(error){
+}).on('error', function(error) {
   console.log('error is:', error);
 })
+
+
+// Database Connection
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://animalia-team11:1URdYyRpqDEKEuDT@cluster0.txx4c.mongodb.net/test";
+// const clients = new MongoClient(uri, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// });
+// console.log('Connected to Atlas');
+// clients.connect(err => {
+//   const collection = clients.db("Animalia").collection("customer");
+//   // perform actions on the collection object
+//   clients.close();
+// });
 
 // Google Auth section
 const {
@@ -30,22 +66,11 @@ const client = new OAuth2Client(CLIENT_ID);
 
 const PORT = process.env.PORT || 3000;
 
-//middleware section
-app.set(cors());
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(cookieParser());
-app.set('view engine', 'ejs');
-
 
 // making path global(server-wise)
 app.use('*/css', express.static('public/css'));
 app.use('*/js', express.static('public/js'));
 app.use('*/images', express.static('public/images'));
-
-//variable section
-let user;
-let check;
 
 // redirecting section
 app.get('/', function(req, res) {
@@ -74,14 +99,46 @@ app.post('/', (req, res) => {
   catch(console.error);
 })
 
+
 app.get('/signin/homepage', checkAuthenticated, (req, res) => {
   user = req.user;
   check = 1;
-  res.render('state_selection', {
-    user,
-    check
-  });
+  let username = user.username;
+  email = user.email;
+  console.log(username, email);
+
+  Customer.findOne({
+    email
+  }, (err, doc) => {
+    if (err) {
+      console.log(err);
+    } else if (!doc) {
+      console.log('Student details unavailable');
+      const studentData = new Customer({
+        username: username,
+        email: email,
+        id: 0
+      })
+      studentData.save(function(err, book) {
+        if (err) return console.log(err);
+        console.log("new student" + studentData.username + "created");
+        res.render('state_selection', {
+          user,
+          check
+        });
+      })
+    } else {
+      console.log('Student already exists');
+      res.render('state_selection', {
+        user,
+        check
+      });
+    }
+  })
 })
+
+
+app.post('/signin/homepage', (req, res) => {})
 
 app.get('/signin/bonus', checkAuthenticated, (req, res) => {
   let ran = getRandomInt(3);
@@ -93,6 +150,7 @@ app.get('/signin/bonus', checkAuthenticated, (req, res) => {
   } else {
     res.render('fishes_ar');
   }
+
 })
 
 app.get('/nosignin/homepage', function(req, res) {
@@ -143,6 +201,7 @@ app.get('/nosignin/homepage/andhra_pradesh/stream5', function(req, res) {
 
 app.get('/nosignin/homepage/andhra_pradesh/quiz', function(req, res) {
   res.sendFile(path.join(__dirname, 'views/quiz.html'));
+  // res.sendFile(path.join(__dirname, 'views/test.html'));
 });
 
 app.get('/nosignin/homepage/andhra_pradesh/quiz/play', function(req, res) {
@@ -162,18 +221,156 @@ app.get('/downloadmarker', function(req, res) {
 });
 
 app.get('/nosignin/homepage/andhra_pradesh/quiz/claim_reward', function(req, res) {
-  let ran = getRandomInt(5);
-  console.log(ran);
-  if (ran === 1) {
-    res.sendFile(path.join(__dirname, 'views/ar.html'));
-  } else if (ran === 2) {
-    res.render('tiger_ar');
-  } else if (ran === 3) {
-    res.render('chameleon');
-  } else {
-    res.render('elephant_ar');
-  }
+  // let ran = getRandomInt(5);
+  // console.log(ran);
+  // if (ran === 1) {
+  //   // res.sendFile(path.join(__dirname, 'views/ar.html'));
+  //   res.render('ar');
+  //   curr_link = 'ar';
+  // } else if (ran === 2) {
+  //   res.render('tiger_ar');
+  //   curr_link = 'tiger_ar';
+  // } else if (ran === 3) {
+  //   res.render('chameleon');
+  //   curr_link = 'chameleon';
+  // } else {
+  //   res.render('elephant_ar');
+  //   curr_link = 'elephant_ar';
+  // }
+
+
+  Customer.findOne({
+    email
+  }, (err, doc) => {
+    if (err) {
+      console.log(err);
+    } else if (!doc) {
+      console.log('Student details unavailable');
+    } else {
+      console.log('Student found');
+      id = doc.id;
+      console.log('Before id: ' + id);
+      if (id < 4) {
+        // incrementing image
+        id = id + 1;
+        console.log('After id: ' + id);
+        // updating id in database
+        Customer.findOneAndUpdate({
+          "email": email
+        }, {
+          "$set": {
+            "id": id
+          }
+        }).exec(function(err, book) {
+          if (err) {
+            console.log(err);
+            res.status(500).send(err);
+          } else {
+            console.log('Id updated');
+            console.log('image path: ' + curr_imagePath);
+            res.redirect('/collections');
+          }
+        });
+      } else {
+        console.log('All rewards collected');
+        res.redirect('/collections');
+      }
+    }
+  })
+
 });
+
+app.get('/signin/ar1', function(req, res){
+  res.render('ar1');
+})
+
+app.get('/signin/ar2', function(req, res){
+  res.render('ar2');
+})
+
+app.get('/signin/ar3', function(req, res){
+  res.render('elephant_ar');
+})
+
+app.get('/signin/ar4', function(req, res){
+  res.render('ar4');
+})
+
+// app.get('/signin/homepage/andhra_pradesh/quiz/dummy', function(req, res){
+//   // person.tags.push(curr_link);
+//
+// });
+
+app.get('/uploadBadge', function(req, res) {
+
+  Customer.findOne({
+    email
+  }, (err, doc) => {
+    if (err) {
+      console.log(err);
+    } else if (!doc) {
+      console.log('Student details unavailable');
+    } else {
+      console.log('Student found');
+      id = doc.id;
+      console.log('Before id: ' + id);
+      if (id <= 4) {
+        // incrementing image
+        id = id + 1;
+        console.log('After id: ' + id);
+        // updating id in database
+        Customer.findOneAndUpdate({
+          "email": email
+        }, {
+          "$set": {
+            "id": id
+          }
+        }).exec(function(err, book) {
+          if (err) {
+            console.log(err);
+            res.status(500).send(err);
+          } else {
+            console.log('Id updated');
+            console.log('image path: ' + curr_imagePath);
+            res.redirect('/collections');
+          }
+        });
+      } else {
+        console.log('All rewards collected');
+      }
+    }
+  })
+
+});
+
+// collections
+app.get('/collections', function(req, res) {
+  console.log("Iam in collections");
+  Customer.findOne({
+    email
+  }, (err, doc) => {
+    if (err) {
+      console.log(err);
+    } else if (!doc) {
+      console.log('Student details unavailable');
+    } else {
+      console.log('Student found');
+      id = doc.id;
+      console.log('Before id: ' + id);
+      if (id > 4) {
+        console.log('All rewards collected');
+        res.render('collection', {
+          id
+        });
+      } else {
+        console.log('id: '+id);
+        res.render('collection', {
+          id
+        });
+      }
+    }
+  })
+})
 
 // chech authentication function
 
@@ -208,5 +405,11 @@ function getRandomInt(max) {
 
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  // console.log(`
+  //               Server running on port $ {
+  //                 PORT
+  //               }
+  //               `);
+
+  console.log("Server started on port 3000.");
 })
