@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Collections</title>
+  <link rel="stylesheet" href="css/collection.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="cards">
+
+
+
+    <% for(var i = 1; i <= id; i++) { %>
+      <div class="card">
+        <!-- src = "images/gift"+id+".png"; -->
+        <img class="card__image" src="https://fakeimg.pl/400x300/009578/fff/" alt="">
+        <div class="card__content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus id ab tenetur delectus reiciendis fugit autem qui at.
+          </p>
+          <p>
+            Alias itaque praesentium eum, pariatur consequatur ducimus asperiores accusantium velit minima?
+          </p>
+        </div>
+        <div class="card__info">
+          <div>
+            <i class="material-icons">thumb_up</i>310
+          </div>
+          <div>
+            <a target="_blank" href="/signin/ar<%=i%>"  class="card__link">View Article</a>
+          </div>
+        </div>
+      </div>
+    <% } %>
+
+    <!-- href="/signin/ar<%=i%>" -->
+
+
+
+
+  </div>
+
+</body>
+
+</html>
