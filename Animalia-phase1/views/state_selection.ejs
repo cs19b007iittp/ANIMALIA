@@ -1,214 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Homepage</title>
 	<link rel="icon" href="/css/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-   <style type="text/css">
-	.carousel-item {
-		height: 100vh;
-		min-height: 300px;
-		background: no-repeat center center scroll;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-	  }
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<style type="text/css">
+		.carousel-item {
+			height: 100vh;
+			min-height: 300px;
+			background: no-repeat center center scroll;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+
 		/*---Firefox Bug Fix --*/
 		.carousel-item {
-		transition: -webkit-transform 0.5s ease;
-		transition: transform 0.5s ease;
-		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-		-webkit-backface-visibility: visible;
-				backface-visibility: visible;
-	  }
-	  .h2 {
-		margin: 60px;
-		text-align: justify;
-	  }
-	  </style>
-	  <link rel="stylesheet" href="css/state_selection.css">
+			transition: -webkit-transform 0.5s ease;
+			transition: transform 0.5s ease;
+			transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+			-webkit-backface-visibility: visible;
+			backface-visibility: visible;
+		}
+
+		.h2 {
+			margin: 60px;
+			text-align: justify;
+		}
+
+		.floatDiv{
+			position: absolute;
+			z-index: 1000;
+			top: 10%;
+		}
+
+		.signinbtn {
+			position: absolute;
+		}
+
+		.signinbtn,
+		.signinbtn::after {
+			width: 380px;
+			height: 86px;
+			font-size: 36px;
+			font-family: "Bebas Neue", cursive;
+			background: linear-gradient(45deg, transparent 5%, #55081a 5%);
+			border: 0;
+			color: #fff;
+			letter-spacing: 3px;
+			line-height: 88px;
+			box-shadow: 6px 0px 0px #be1414;
+			outline: transparent;
+			position: relative;
+		}
+
+		.signinbtn::after {
+			--slice-0: inset(50% 50% 50% 50%);
+			--slice-1: inset(80% -6px 0 0);
+			--slice-2: inset(50% -6px 30% 0);
+			--slice-3: inset(10% -6px 85% 0);
+			--slice-4: inset(40% -6px 43% 0);
+			--slice-5: inset(80% -6px 5% 0);
+			content: "AVAILABLE NOW";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(45deg,
+					transparent 3%,
+					#00e6f6 3%,
+					#00e6f6 5%,
+					#a10707 5%);
+			text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+			clip-path: var(--slice-0);
+		}
+
+		.signinbtn:hover::after {
+			animation: 1s glitch;
+			animation-timing-function: steps(2, end);
+		}
+
+		@keyframes glitch {
+			0% {
+				clip-path: var(--slice-1);
+				transform: translate(-20px, -10px);
+			}
+
+			10% {
+				clip-path: var(--slice-3);
+				transform: translate(10px, 10px);
+			}
+
+			20% {
+				clip-path: var(--slice-1);
+				transform: translate(-10px, 10px);
+			}
+
+			30% {
+				clip-path: var(--slice-3);
+				transform: translate(0px, 5px);
+			}
+
+			40% {
+				clip-path: var(--slice-2);
+				transform: translate(-5px, 0px);
+			}
+
+			50% {
+				clip-path: var(--slice-3);
+				transform: translate(5px, 0px);
+			}
+
+			60% {
+				clip-path: var(--slice-4);
+				transform: translate(5px, 10px);
+			}
+
+			70% {
+				clip-path: var(--slice-2);
+				transform: translate(-10px, 10px);
+			}
+
+			80% {
+				clip-path: var(--slice-5);
+				transform: translate(20px, -10px);
+			}
+
+			90% {
+				clip-path: var(--slice-1);
+				transform: translate(-10px, 0px);
+			}
+
+			100% {
+				clip-path: var(--slice-1);
+				transform: translate(0);
+			}
+		}
+
+	</style>
+	<link rel="stylesheet" href="css/state_selection.css">
 </head>
 
-<body  data-spy="scroll" data-target="#navbarResponsive">
+<body data-spy="scroll" data-target="#navbarResponsive">
 	<!-- start home section -->
-<div id="home">
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">ANIMALIA</a>
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-	<div class="collapse navbar-collapse" id="navbarResponsive">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="#home">Home</a>
-			</li>
-			<li class="nav-item">
-				<a target="_blank" class="nav-link" href="/nosignin/homepage/andhra_pradesh/quiz">quiz</a>
-			</li>
-			<li class="nav-item">
-				<a target="_blank" class="nav-link" href="/nosignin/homepage/andhra_pradesh/instructions">help</a>
-			</li>
-		</ul>
-	 </div>
-  </nav>
+	<div id="home">
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+			<a class="navbar-brand" href="#">ANIMALIA</a>
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a target="_blank" class="nav-link" href="/nosignin/homepage/andhra_pradesh/quiz">quiz</a>
+					</li>
+					<li class="nav-item">
+						<a target="_blank" class="nav-link" href="/collections">collections</a>
+					</li>
+					<li class="nav-item">
+						<a target="_blank" class="nav-link" href="/nosignin/homepage/andhra_pradesh/instructions">help</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-	<ol class="carousel-indicators">
-	  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-	  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-	  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-	</ol>
-	<div class="carousel-inner" role="listbox">
-	  <!-- Slide One -->
-	  <div class="carousel-item active" style="background-image: url('images/slide1.jpg')">
-		<div class="carousel-caption d-none d-md-block">
-		  <h3>Welcome to ANIMALIA</h3>
-		  <p><b style="color: brown;">Re-wilding</b> starts from here</p>
+		<!-- Bonus button check and display -->
+		<div class="floatDiv">
+			<!-- <% if (check === 1) { %> -->
+			<button class="signinbtn"><a target="_blank" href="/signin/bonus" style="text-decoration:none; color: inherit;">LOGIN BONUS</a></button>
+			<!-- <% } %> -->
 		</div>
-	  </div>
-	  <!-- Slide Two -->
-	  <div class="carousel-item" style="background-image: url('images/slide2.jpg')">
-	  </div>
-	  <!-- Slide Three -->
-	  <div class="carousel-item" style="background-image: url('images/slide3.jpg')">
-	  </div>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<!-- Slide One -->
+				<div class="carousel-item active" style="background-image: url('images/slide1.jpg')">
+					<div class="carousel-caption d-none d-md-block">
+						<h3>Welcome to ANIMALIA</h3>
+						<p><b style="color: brown;">Re-wilding</b> starts from here</p>
+					</div>
+				</div>
+				<!-- Slide Two -->
+				<div class="carousel-item" style="background-image: url('images/slide2.jpg')">
+				</div>
+				<!-- Slide Three -->
+				<div class="carousel-item" style="background-image: url('images/slide3.jpg')">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
 	</div>
-	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	  <span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	  <span class="sr-only">Next</span>
-	</a>
-  </div>
-</div>
-<!-- end home section -->
-<br>
-<br>
-<br>
-<h1 style="text-align: center;"><b>Let's RE-Wild</b></h1>
-<h3 style="text-align: center;">Did you ever wonder why dinosaurs are not there now?Do u know when they existed?Do want to know about past?Then why late,dive into ANIMALIA and rewind the past biodiversity</h3>
-<br>
-<img src="images/knightingale.jpg" alt="" style="float:left" width="50%" height="50%" "background-color:#BBE1FA;">
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="dropdown">
-	<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	 Select your state here
-	</button>
-	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-	  <a class="dropdown-item" href="/nosignin/homepage/andhra_pradesh">Andhra Pradesh</a>
-	  <a class="dropdown-item disabled" href="#" aria-disabled="true">Tamilnadu</a>
-	  <a class="dropdown-item disabled" href="#" aria-disabled="true">Karnataka</a>
+	<!-- end home section -->
+	<br>
+	<br>
+	<br>
+	<h1 style="text-align: center;"><b>Let's RE-Wild</b></h1>
+	<h3 style="text-align: center;">Did you ever wonder why dinosaurs are not there now?Do u know when they existed?Do want to know about past?Then why late,dive into ANIMALIA and rewind the past biodiversity</h3>
+	<br>
+	<img src="images/knightingale.jpg" alt="" style="float:left" width="50%" height="50%" "background-color:#BBE1FA;">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="dropdown">
+		<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Select your state here
+		</button>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			<a class="dropdown-item" href="/nosignin/homepage/andhra_pradesh">Andhra Pradesh</a>
+			<a class="dropdown-item disabled" href="#" aria-disabled="true">Tamilnadu</a>
+			<a class="dropdown-item disabled" href="#" aria-disabled="true">Karnataka</a>
+		</div>
 	</div>
-  </div>
 
-  <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-8 col-lg-6">
-      <!-- Section Heading-->
-      <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-        <h3 class"about_us_heading">Our Creative <span> Team</span></h3>
-        <p class="about_us_paragraph">Appland is completely creative, lightweight, clean &amp; super responsive app landing page.</p>
-        <div class="line"></div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <!-- Single Advisor-->
-    <div class="col-12 col-sm-6 col-lg-3">
-      <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-        <!-- Team Thumb-->
-        <div class="advisor_thumb"><img class="about_us_img" src="images/greeshmitha.jpeg" alt="">
-          <!-- Social Info-->
-          <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-        </div>
-        <!-- Team Details-->
-        <div class="single_advisor_details_info">
-          <h6>Greeshmitha</h6>
-          <p class="designation">UI Designer</p>
-        </div>
-      </div>
-    </div>
-    <!-- Single Advisor-->
-    <div class="col-12 col-sm-6 col-lg-3">
-      <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-        <!-- Team Thumb-->
-        <div class="advisor_thumb"><img class="about_us_img" src="images/ruthvik.png" alt="">
-          <!-- Social Info-->
-          <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-        </div>
-        <!-- Team Details-->
-        <div class="single_advisor_details_info">
-          <h6>Bobba Rthvik</h6>
-          <p class="designation">Developer</p>
-        </div>
-      </div>
-    </div>
-    <!-- Single Advisor-->
-    <div class="col-12 col-sm-6 col-lg-3">
-      <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-        <!-- Team Thumb-->
-        <div class="advisor_thumb"><img class="about_us_img" src="images/suman.jpeg" alt="">
-          <!-- Social Info-->
-          <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-        </div>
-        <!-- Team Details-->
-        <div class="single_advisor_details_info">
-          <h6>Suman P</h6>
-          <p class="designation">Project architect</p>
-        </div>
-      </div>
-    </div>
-    <!-- Single Advisor-->
-    <div class="col-12 col-sm-6 col-lg-3">
-      <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-        <!-- Team Thumb-->
-        <div class="advisor_thumb"><img class="about_us_img " src="images/rithika.jpeg" alt="">
-          <!-- Social Info-->
-          <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
-        </div>
-        <!-- Team Details-->
-        <div class="single_advisor_details_info">
-          <h6>Rithika S</h6>
-          <p class="designation">QA and testing specialist</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br><br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-sm-8 col-lg-6">
+				<!-- Section Heading-->
+				<div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+					<h3 class"about_us_heading">Our Creative <span> Team</span></h3>
+					<p class="about_us_paragraph">Appland is completely creative, lightweight, clean &amp; super responsive app landing page.</p>
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<!-- Single Advisor-->
+			<div class="col-12 col-sm-6 col-lg-3">
+				<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+					<!-- Team Thumb-->
+					<div class="advisor_thumb"><img class="about_us_img" src="images/greeshmitha.jpeg" alt="">
+						<!-- Social Info-->
+						<div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+					</div>
+					<!-- Team Details-->
+					<div class="single_advisor_details_info">
+						<h6>Greeshmitha</h6>
+						<p class="designation">UI Designer</p>
+					</div>
+				</div>
+			</div>
+			<!-- Single Advisor-->
+			<div class="col-12 col-sm-6 col-lg-3">
+				<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+					<!-- Team Thumb-->
+					<div class="advisor_thumb"><img class="about_us_img" src="images/ruthvik.png" alt="">
+						<!-- Social Info-->
+						<div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+					</div>
+					<!-- Team Details-->
+					<div class="single_advisor_details_info">
+						<h6>Bobba Rthvik</h6>
+						<p class="designation">Developer</p>
+					</div>
+				</div>
+			</div>
+			<!-- Single Advisor-->
+			<div class="col-12 col-sm-6 col-lg-3">
+				<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+					<!-- Team Thumb-->
+					<div class="advisor_thumb"><img class="about_us_img" src="images/suman.jpeg" alt="">
+						<!-- Social Info-->
+						<div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+					</div>
+					<!-- Team Details-->
+					<div class="single_advisor_details_info">
+						<h6>Suman P</h6>
+						<p class="designation">Project architect</p>
+					</div>
+				</div>
+			</div>
+			<!-- Single Advisor-->
+			<div class="col-12 col-sm-6 col-lg-3">
+				<div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+					<!-- Team Thumb-->
+					<div class="advisor_thumb"><img class="about_us_img " src="images/rithika.jpeg" alt="">
+						<!-- Social Info-->
+						<div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+					</div>
+					<!-- Team Details-->
+					<div class="single_advisor_details_info">
+						<h6>Rithika S</h6>
+						<p class="designation">QA and testing specialist</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-<!-- - Start Course Section -->
- <!-- <div id="course" class="offset">
+
+	<!-- - Start Course Section -->
+	<!-- <div id="course" class="offset">
 
 <div class="col-12 narrow text-center">
 	<h1>Nuno Theme Course</h1>
@@ -217,10 +341,11 @@
 </div>
 
 </div> -->
-<!--- End Course Section -->
+	<!--- End Course Section -->
 
 
 
 
 </body>
+
 </html>
