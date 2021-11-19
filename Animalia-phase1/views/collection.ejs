@@ -11,34 +11,46 @@
 <body>
   <div class="cards">
 
-
-
     <% for(var i = 1; i <= id; i++) { %>
       <div class="card">
-        <!-- src = "images/gift"+id+".png"; -->
-        <img class="card__image" src="https://fakeimg.pl/400x300/009578/fff/" alt="">
+        <% if (i === 1) { %>
+        <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
         <div class="card__content">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus id ab tenetur delectus reiciendis fugit autem qui at.
-          </p>
-          <p>
-            Alias itaque praesentium eum, pariatur consequatur ducimus asperiores accusantium velit minima?
-          </p>
+          <p>Well done! This is your first reward:) keep going!</p>
+          <p>Oh, it's a Sparrow! Do you know what makes sparrows so special?</p>
+          <p>Well, Sparrows are very small birds, they can reach 4 to 8 inches in length and 0.8 to 1.4 ounces in weight! Although sparrows do not belong to the group of water birds, they can swim very fast to escape from predators!</p>
         </div>
+          <% } %>
+          <% if (i === 2) { %>
+        <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
+        <div class="card__content">
+          <p>Can you guess what this is?</p>
+          <p>Yes, that's right! it's a chameleon!!</p>
+          <p>Chameleons come in a lot of different shapes and sizes and are known to have extremely powerful tongues!</p>
+        </div>
+          <% } %>
+          <% if (i === 3) { %>
+        <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
+        <div class="card__content">
+          <p>Yaay! You've added an Elephant to your collection!</p>
+          <p>Did you know that Elephants are the largest living land animals? Also, they can literally spend 16 hours per day eating</p>
+        </div>
+          <% } %>
+          <% if (i === 4) { %>
+        <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
+        <div class="card__content">
+          <p>Whoa! it's a Tiger</p>
+          <p>Do you know what's really interesting about Tigers? Tiger cubs are born blind and only half of the cubs survive</p>
+          <p>Tigers lovee to swim and play in water. They are generally good swimmers and can swim up to 6 kilometres</p>
+        </div>
+          <% } %>
         <div class="card__info">
           <div>
-            <i class="material-icons">thumb_up</i>310
-          </div>
-          <div>
-            <a target="_blank" href="/signin/ar<%=i%>"  class="card__link">View Article</a>
+            <a target="_blank" href="/signin/ar<%=i%>"  class="card__link">view AR!</a>
           </div>
         </div>
       </div>
     <% } %>
-
-    <!-- href="/signin/ar<%=i%>" -->
-
-
 
 
   </div>
