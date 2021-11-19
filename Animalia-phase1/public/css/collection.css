@@ -1,6 +1,6 @@
 body{
-    /* background-color: #00A8CC; */
-    background-image: url("images/reward_bg.jpg");
+    background-color: #00A8CC;
+/*     background-image: url("images/reward_bg.jpg"); */
     background-size: cover;
     background-attachment: fixed;
 }
