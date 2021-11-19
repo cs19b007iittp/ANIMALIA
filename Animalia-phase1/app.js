@@ -71,6 +71,7 @@ const PORT = process.env.PORT || 3000;
 app.use('*/css', express.static('public/css'));
 app.use('*/js', express.static('public/js'));
 app.use('*/images', express.static('public/images'));
+app.use('*/audios', express.static('public/audios'));
 
 // redirecting section
 app.get('/', function(req, res) {
