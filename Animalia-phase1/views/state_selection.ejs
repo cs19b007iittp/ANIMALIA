@@ -8,7 +8,7 @@
 	<link rel="icon" href="/css/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -38,7 +38,7 @@
 			text-align: justify;
 		}
 
-		.floatDiv{
+		.floatDiv {
 			position: absolute;
 			z-index: 1000;
 			top: 10%;
@@ -148,7 +148,6 @@
 				transform: translate(0);
 			}
 		}
-
 	</style>
 	<link rel="stylesheet" href="css/state_selection.css">
 </head>
@@ -171,9 +170,11 @@
 					<li class="nav-item">
 						<a target="_blank" class="nav-link" href="/nosignin/homepage/andhra_pradesh/quiz">quiz</a>
 					</li>
+					<% if (check === 1) { %>
 					<li class="nav-item">
-						<a target="_blank" class="nav-link" href="/collections">collections</a>
+						<a target="_blank" class="nav-link" href="/view_collections">collections</a>
 					</li>
+					<% } %>
 					<li class="nav-item">
 						<a target="_blank" class="nav-link" href="/nosignin/homepage/andhra_pradesh/instructions">help</a>
 					</li>
@@ -183,9 +184,9 @@
 
 		<!-- Bonus button check and display -->
 		<div class="floatDiv">
-			<!-- <% if (check === 1) { %> -->
+			<% if (check === 1) { %>
 			<button class="signinbtn"><a target="_blank" href="/signin/bonus" style="text-decoration:none; color: inherit;">LOGIN BONUS</a></button>
-			<!-- <% } %> -->
+			<% } %>
 		</div>
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
