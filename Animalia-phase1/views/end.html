@@ -18,6 +18,35 @@
       }
     }
   </script> -->
+
+
+  <% if (check === 0) { %>
+  <script>
+    function newDoc() {
+      var ask = window.confirm("Do you want to download HIRO marker? Press 'ok', else 'cancel'");
+      if (ask) {
+        window.open('/downloadmarker', '_blank');
+      } else {
+        window.open('/nosignin/homepage/andhra_pradesh/quiz/claim_reward', '_blank');
+      }
+    }
+  </script>
+  <% } %>
+
+  <% if (check === 1) { %>
+  <script>
+    function doSomething() {
+      var ask = window.confirm("Do you want to download HIRO marker? Press 'ok', else 'cancel'");
+      if (ask) {
+        window.open('/downloadmarker', '_blank');
+      } else {
+        window.open('/signin/homepage/andhra_pradesh/quiz/claim_reward', '_blank');
+      }
+    }
+  </script>
+  <% } %>
+
+
 </head>
 
 <body>
@@ -31,10 +60,15 @@
         </button>
       </form>
       <a class="btn" href="/nosignin/homepage/andhra_pradesh/quiz/play">Play Again</a>
+      <% if (check === 0) { %>
+      <a class="btn" onclick="newDoc()" id="check" style="visibility: visible;">Claim Reward</a>
+      <% } %>
+      <% if (check === 1) { %>
       <a class="btn" onclick="doSomething()" id="check" style="visibility: visible;">Claim Reward</a>
+      <% } %>
       <a class="btn" href="/nosignin/homepage/andhra_pradesh/quiz/highscores">High Scores</a>
       <a class="btn" href="javascript:close_window();">Close Quiz</a>
-      <a class="btn" href="/signin/homepage/andhra_pradesh/quiz/dummy">Dummy</a>
+      <!-- <a class="btn" href="/signin/homepage/andhra_pradesh/quiz/dummy">Dummy</a> -->
     </div>
   </div>
   <script type="text/javascript">
@@ -44,25 +78,6 @@
       }
     }
   </script>
-  <script>
-      // Flag for "now processing" or "already clicked".
-      var clicked = false;
-      function doSomething () {
-        // Will only start if clicked is false
-        if (!clicked) {
-          // Set clicked to true
-          clicked = true;
-
-          // Do your processing here
-          alert("Something is done!");
-
-          // Re-enable after processing if you want
-          // clicked = false;
-
-          window.open('/nosignin/homepage/andhra_pradesh/quiz/claim_reward', '_blank');
-        }
-      }
-    </script>
   <script src="js/end.js"></script>
 </body>
 
