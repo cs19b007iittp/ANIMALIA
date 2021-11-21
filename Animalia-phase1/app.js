@@ -11,7 +11,7 @@ var cookieParser = require('cookie-parser')
 let user;
 let check;
 let email;
-let id;
+let id = 0;
 let curr_imagePath;
 let name1 = "Ruthvik";
 let email1 = "ruthvik@gmail.com";
@@ -34,7 +34,9 @@ app.set('view engine', 'ejs');
 
 
 //connect with db
-mongoose.connect('mongodb+srv://animalia-team11:1URdYyRpqDEKEuDT@cluster0.txx4c.mongodb.net/test', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://animalia-team11:1URdYyRpqDEKEuDT@cluster0.txx4c.mongodb.net/test', {
+  useNewUrlParser: true
+});
 
 mongoose.connection.once('open', function() {
   console.log('connection has been made');
@@ -75,6 +77,8 @@ app.use('*/audios', express.static('public/audios'));
 
 // redirecting section
 app.get('/', function(req, res) {
+  check = 0;
+  id = 0;
   res.render('firstPage');
 });
 
@@ -210,7 +214,24 @@ app.get('/nosignin/homepage/andhra_pradesh/quiz/play', function(req, res) {
 });
 
 app.get('/nosignin/homepage/andhra_pradesh/quiz/play/end', function(req, res) {
-  res.sendFile(path.join(__dirname, 'views/end.html'));
+  // res.sendFile(path.join(__dirname, 'views/end.html'));
+  res.render('end', {
+    check
+  });
+});
+
+app.get('/nosignin/homepage/andhra_pradesh/quiz/claim_reward', function(req, res) {
+  let ran = getRandomInt(5);
+  console.log(ran);
+  if (ran === 1) {
+    res.render('ar1');
+  } else if (ran === 2) {
+    res.render('ar2');
+  } else if (ran === 3) {
+    res.render('elephant_ar');
+  } else {
+    res.render('ar4');
+  }
 });
 
 app.get('/nosignin/homepage/andhra_pradesh/quiz/highscores', function(req, res) {
@@ -221,23 +242,7 @@ app.get('/downloadmarker', function(req, res) {
   res.sendFile(path.join(__dirname, 'views/download_marker.html'));
 });
 
-app.get('/nosignin/homepage/andhra_pradesh/quiz/claim_reward', function(req, res) {
-  // let ran = getRandomInt(5);
-  // console.log(ran);
-  // if (ran === 1) {
-  //   // res.sendFile(path.join(__dirname, 'views/ar.html'));
-  //   res.render('ar');
-  //   curr_link = 'ar';
-  // } else if (ran === 2) {
-  //   res.render('tiger_ar');
-  //   curr_link = 'tiger_ar';
-  // } else if (ran === 3) {
-  //   res.render('chameleon');
-  //   curr_link = 'chameleon';
-  // } else {
-  //   res.render('elephant_ar');
-  //   curr_link = 'elephant_ar';
-  // }
+app.get('/signin/homepage/andhra_pradesh/quiz/claim_reward', function(req, res) {
 
 
   Customer.findOne({
@@ -274,26 +279,28 @@ app.get('/nosignin/homepage/andhra_pradesh/quiz/claim_reward', function(req, res
         });
       } else {
         console.log('All rewards collected');
-        res.redirect('/collections');
+        res.render('collection', {
+          id
+        });
       }
     }
   })
 
 });
 
-app.get('/signin/ar1', function(req, res){
+app.get('/signin/ar1', function(req, res) {
   res.render('ar1');
 })
 
-app.get('/signin/ar2', function(req, res){
+app.get('/signin/ar2', function(req, res) {
   res.render('ar2');
 })
 
-app.get('/signin/ar3', function(req, res){
+app.get('/signin/ar3', function(req, res) {
   res.render('elephant_ar');
 })
 
-app.get('/signin/ar4', function(req, res){
+app.get('/signin/ar4', function(req, res) {
   res.render('ar4');
 })
 
@@ -338,11 +345,34 @@ app.get('/uploadBadge', function(req, res) {
         });
       } else {
         console.log('All rewards collected');
+        res.render('collection', {
+          id
+        });
       }
     }
   })
 
 });
+
+app.get('/view_collections', function(req, res) {
+  console.log("Iam in view collections");
+  Customer.findOne({
+    email
+  }, (err, doc) => {
+    if (err) {
+      console.log(err);
+    } else if (!doc) {
+      console.log('Student details unavailable');
+    } else {
+      console.log('Student found');
+      id = doc.id;
+      console.log('Before id: ' + id);
+      res.render('collection', {
+        id
+      });
+    }
+  })
+})
 
 // collections
 app.get('/collections', function(req, res) {
@@ -358,16 +388,25 @@ app.get('/collections', function(req, res) {
       console.log('Student found');
       id = doc.id;
       console.log('Before id: ' + id);
-      if (id > 4) {
-        console.log('All rewards collected');
-        res.render('collection', {
-          id
-        });
-      } else {
-        console.log('id: '+id);
-        res.render('collection', {
-          id
-        });
+      // if (id > 4) {
+      //   console.log('All rewards collected');
+      //   res.render('collection', {
+      //     id
+      //   });
+      // } else {
+      //   console.log('id: '+id);
+      //   res.render('collection', {
+      //     id
+      //   });
+      // }
+      if (id == 1) {
+        res.redirect('/signin/ar1');
+      } else if (id == 2) {
+        res.redirect('/signin/ar2');
+      } else if (id == 3) {
+        res.redirect('/signin/ar3');
+      } else if (id == 4) {
+        res.redirect('/signin/ar4');
       }
     }
   })
