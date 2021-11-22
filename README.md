@@ -49,7 +49,6 @@ The first screen gives you an option to choose the sign in part and then the hom
 2. Bobba Ruthvik(CS19B007)
 3. Suman P(CS19B039)
 4. Sapparapu Rithika(CS19B048)<br />
-Above described are only major contribution roles, but in the need each team member participated in every activity.
 
 ## Tasks and contributions
 ### R1
