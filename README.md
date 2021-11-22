@@ -51,6 +51,29 @@ The first screen gives you an option to choose the sign in part and then the hom
 4. Sapparapu Rithika	-	Responsiveness(related to JavaScript) <br />
 Above described are only major contribution roles, but in the need each team member participated in every activity.
 
+## Tasks and contributions
+R1
+Tasks accomplished
+1. AR is implemented and can be used via quiz.
+2. Information of animal pages has only interesting data attached to it(bullet points) so as to not bore the user.
+
+Future Tasks
+1. Database integration for reward storage purposes.
+2. Changes and modifications based on feedback of R1.
+3. Add an animal audio feature.
+
+R2
+Tasks accomplished
+1. Audio feature added.
+2. Database integration for sign-in users to store rewards.
+
+Future Tasks(Scope of extension)
+1. There is a scope to customize quiz questions instead of taking them API(simply replace API link with path to question file).
+2. Extension to all 29 states of India.
+
+NOTE: Attached below is the google doc link which has information regarding invidual contribution to the project
+https://docs.google.com/document/d/1EnRxaUQELIiBgonLyXNOSNRehVfosiDDuAY1Klvp1p0/edit?usp=sharing
+
 
 ### Github Repository link
 https://github.com/BobbaRuthvik/ANIMALIA
