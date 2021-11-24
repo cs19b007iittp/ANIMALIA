@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ANIMALIA</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="/css/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!--Bonus Button animation -->
+  <style media="screen">
+    .fcc-btn {
+      background-color: #6cd29f;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+    }
+    .fcc-btn:hover {
+      background-color: #223094;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main">
+
+    <div class="topnav">
+      <% if (check === 1) { %>
+        <p class="username">Hi, <%=user.name %></p>
+        <%} %>
+      <div class="topnav-right">
+        <a href="/nosignin/homepage">HOME</a>
+        <a target="_blank" href="/nosignin/homepage/andhra_pradesh/quiz">QUIZ</a>
+        <a target="_blank" href="/nosignin/homepage/andhra_pradesh/instructions">INSTRUCTIONS</a>
+      </div>
+    </div>
+
+
+    <img src="images/timelinebg2.jpg" alt="" class="timelineimage">
+    <h1>WELCOME TO J&K WILDLIFE!</h1>
+
+  </div>
+
+  <!-- 5 time period display -->
+  <div class="container">
+
+    <div class="top-section">
+      <h1>Wildlife of Jammu and Kashmir </h1>
+      <p> Jammu and Kashmir has wide range of animals which aren't found any other parts of the country due to its climatic condition. The rare and endangered species found in J&K include Kashmir stag (hangul), Snow Leopard, Markhor, Musk deer, brown bear and Western tragopan etc. The Himalayas play a major role in the ecosystem of the state. The J&K Forest Department is making all possible efforts for conservation and propagation of these species their habitat.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="line"></div>
+
+
+      <div class="section">
+        <div class="bead"></div>
+        <div class="content">
+          <h2>(1971 - 1981)</h2>
+          <p>The Department of Wildlife Protection, Jammu & Kashmir Government, came into existence in the year 1978 to implement the Jammu and Kashmir Wildlife (Protection) Act, 1978 providing protection to the wildlife flora and fauna and management of Protected Areas in the state.</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream1"> <button class="showmorebutton">Show me more!</button> </a>
+        </div>
+        <img src="images/animal_welfare.png" class="img-right">
+      </div>
+
+
+      <div class="section">
+        <div class="bead"></div>
+        <div class="content">
+          <h2>(1981 - 1991)</h2>
+          <p>All wildlife santuaries in J&K like Trikuta,Surinsar, Ramnagar Rakha, Nandni, Baltal-Thajwas, Gulmarg and several other widlife sanctuary came into existense during this period.</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream2"> <button class="showmorebutton">Show me more!</button> </a>
+        </div>
+        <img src="images/forest-laws.png" class="img-left" style="width: 20%; height: 20%;">
+      </div>
+
+
+      <div class="section">
+        <div class="bead"></div>
+        <div class="content">
+          <h2>(1991 - 2001)</h2>
+          <p>Dachigam National Park, Salim Ali National Park, Kazinag National Park, Kishtwar High Altitude National Park are the prominent National Parks in J&K.
+Hemis National Park</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream3"> <button class="showmorebutton">Show me more!</button> </a>
+        </div>
+        <img src="images/animal-sanctuary.png" class="img-right">
+      </div>
+
+
+
+      <div class="section">
+        <div class="bead"></div>
+        <div class="content">
+          <h2>(2001 - 2011)</h2>
+          <p>The J&K Wildlife (Protection) Act, 1978 was amended in 2002 on the lines of the National Wildlife Protection Act, 1972.</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream4"> <button class="showmorebutton">Show me more!</button> </a>
+        </div>
+        <img src="images/national-park.png" class="img-left" style="width: 20%; height: 20%;">
+      </div>
+
+
+
+      <div class="section">
+        <div class="bead"></div>
+        <div class="content">
+          <h2>(2011 - 2021)</h2>
+          <p>The Limber and the Lachipora wildlife sanctuaries were clubbed to form the Kajinag National Park in 2012 to conserve markhor.</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream5"> <button class="showmorebutton">Show me more!</button> </a>
+          <!-- class="fcc-btn" -->
+        </div>
+        <img src="images/forest-fire.png" class="img-right">
+      </div>
+
+
+
+
+    </div>
+  </div>
+<!-- Java Script file link -->
+  <script src="js/timeline.js"></script>
+</body>
+
+</html>
+
+<!-- FIXME: Some additional(empty) space in right -->
+<!-- TODO: Button CSS improvement -->
