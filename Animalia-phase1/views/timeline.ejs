@@ -29,12 +29,15 @@
 
     <div class="topnav">
       <% if (check === 1) { %>
-        <p class="username">Hi, <%=user.name %></p>
-        <%} %>
+      <p class="username">Hi, <%=user.name %></p>
+      <%} %>
       <div class="topnav-right">
         <a href="/nosignin/homepage">HOME</a>
         <a target="_blank" href="/nosignin/homepage/andhra_pradesh/quiz">QUIZ</a>
         <a target="_blank" href="/nosignin/homepage/andhra_pradesh/instructions">INSTRUCTIONS</a>
+        <% if (check === 1) { %>
+        <a href="/" onclick="signOut();">SIGN OUT</a>
+        <% } %>
       </div>
     </div>
 
@@ -49,7 +52,8 @@
 
     <div class="top-section">
       <h1>Wildlife of Andhra Pradesh</h1>
-      <p>The state of Andhra Pradesh is considered one of the rich bio-diversified states in India. Natural vegetation (flora) and animal life (fauna) depend mainly on climate, relief, and soil. Krishna and Godavari are the two largest rivers flowing through the state. The Andhra Pradesh Forest Department deals with protection, conservation and management of forests</p>
+      <p>The state of Andhra Pradesh is considered one of the rich bio-diversified states in India. Natural vegetation (flora) and animal life (fauna) depend mainly on climate, relief, and soil. Krishna and Godavari are the two largest rivers flowing
+        through the state. The Andhra Pradesh Forest Department deals with protection, conservation and management of forests</p>
     </div>
 
     <div class="timeline">
@@ -123,7 +127,15 @@
 
     </div>
   </div>
-<!-- Java Script file link -->
+  <script>
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function() {
+        console.log("User signed out.");
+      })
+    }
+  </script>
+  <!-- Java Script file link -->
   <script src="js/timeline.js"></script>
 </body>
 
