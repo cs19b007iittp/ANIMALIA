@@ -1,5 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<style media="screen">
+  .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+  }
+
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
+  }
+</style>
 
 <head>
   <meta charset="utf-8">
@@ -9,51 +31,74 @@
 </head>
 
 <body>
+  <% if (id === 4) { %>
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Congrats!</strong> Successfully all rewards collected.
+  </div>
+  <% } %>
   <div class="cards">
 
     <% for(var i = 1; i <= id; i++) { %>
-      <div class="card">
-        <% if (i === 1) { %>
-        <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
-        <div class="card__content">
-          <p>Well done! This is your first reward:) keep going!</p>
-          <p>Oh, it's a Sparrow! Do you know what makes sparrows so special?</p>
-          <p>Well, Sparrows are very small birds, they can reach 4 to 8 inches in length and 0.8 to 1.4 ounces in weight! Although sparrows do not belong to the group of water birds, they can swim very fast to escape from predators!</p>
-        </div>
-          <% } %>
-          <% if (i === 2) { %>
-        <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
-        <div class="card__content">
-          <p>Can you guess what this is?</p>
-          <p>Yes, that's right! it's a chameleon!!</p>
-          <p>Chameleons come in a lot of different shapes and sizes and are known to have extremely powerful tongues!</p>
-        </div>
-          <% } %>
-          <% if (i === 3) { %>
-        <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
-        <div class="card__content">
-          <p>Yaay! You've added an Elephant to your collection!</p>
-          <p>Did you know that Elephants are the largest living land animals? Also, they can literally spend 16 hours per day eating</p>
-        </div>
-          <% } %>
-          <% if (i === 4) { %>
-        <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
-        <div class="card__content">
-          <p>Whoa! it's a Tiger</p>
-          <p>Do you know what's really interesting about Tigers? Tiger cubs are born blind and only half of the cubs survive</p>
-          <p>Tigers lovee to swim and play in water. They are generally good swimmers and can swim up to 6 kilometres</p>
-        </div>
-          <% } %>
-        <div class="card__info">
-          <div>
-            <a target="_blank" href="/signin/ar<%=i%>"  class="card__link">view AR!</a>
-          </div>
+    <div class="card">
+      <% if (i === 1) { %>
+      <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
+      <div class="card__content">
+        <p>Well done! This is your first reward:) keep going!</p>
+        <p>Oh, it's a Sparrow! Do you know what makes sparrows so special?</p>
+        <p>Well, Sparrows are very small birds, they can reach 4 to 8 inches in length and 0.8 to 1.4 ounces in weight! Although sparrows do not belong to the group of water birds, they can swim very fast to escape from predators!</p>
+      </div>
+      <% } %>
+      <% if (i === 2) { %>
+      <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
+      <div class="card__content">
+        <p>Can you guess what this is?</p>
+        <p>Yes, that's right! it's a chameleon!!</p>
+        <p>Chameleons come in a lot of different shapes and sizes and are known to have extremely powerful tongues!</p>
+      </div>
+      <% } %>
+      <% if (i === 3) { %>
+      <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
+      <div class="card__content">
+        <p>Yaay! You've added an Elephant to your collection!</p>
+        <p>Did you know that Elephants are the largest living land animals? Also, they can literally spend 16 hours per day eating</p>
+      </div>
+      <% } %>
+      <% if (i === 4) { %>
+      <img class="card__image" src="images/gift<%=i%>.jpg" alt="">
+      <div class="card__content">
+        <p>Whoa! it's a Tiger</p>
+        <p>Do you know what's really interesting about Tigers? Tiger cubs are born blind and only half of the cubs survive</p>
+        <p>Tigers lovee to swim and play in water. They are generally good swimmers and can swim up to 6 kilometres</p>
+      </div>
+      <% } %>
+      <div class="card__info">
+        <div>
+          <a target="_blank" href="/signin/ar<%=i%>" class="card__link">view AR!</a>
         </div>
       </div>
+    </div>
     <% } %>
 
 
   </div>
+
+  <!-- <script>
+    function init() {
+      var count = 5;
+      var counter = setInterval(timer, 1000);
+
+      function timer() {
+        count -= 1; //count = count-1 and count -= 1 are the same
+        if (count === 0) { //use triple equals sign
+          clearInterval(counter); //delete the interval when we are done with it
+          alert("This is an alert"); //semi-colon
+          window.location = "http://www.example.com";
+          return;
+        }
+      }
+    }
+  </script> -->
 
 </body>
 
