@@ -173,6 +173,20 @@ app.get('/nosignin/homepage/andhra_pradesh', function(req, res) {
   });
 });
 
+app.get('/nosignin/homepage/rajasthan', function(req, res) {
+  res.render('timelineRS', {
+    user,
+    check
+  });
+});
+
+app.get('/nosignin/homepage/jk', function(req, res) {
+  res.render('timelineJK', {
+    user,
+    check
+  });
+});
+
 // Time streams redirection
 
 app.get('/nosignin/homepage/andhra_pradesh/instructions', function(req, res) {
@@ -199,6 +213,48 @@ app.get('/nosignin/homepage/andhra_pradesh/stream4', function(req, res) {
 
 app.get('/nosignin/homepage/andhra_pradesh/stream5', function(req, res) {
   res.sendFile(path.join(__dirname, 'views/period2011.html'));
+});
+
+app.get('/nosignin/homepage/rajasthan/stream1', function(req, res) {
+  // res.sendFile(path.join(__dirname, 'views/stream1.html'));
+  res.sendFile(path.join(__dirname, 'views/1971RS.html'));
+});
+
+app.get('/nosignin/homepage/rajasthan/stream2', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/1981RS.html'));
+});
+
+app.get('/nosignin/homepage/rajasthan/stream3', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/1991RS.html'));
+});
+
+app.get('/nosignin/homepage/rajasthan/stream4', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/2001RS.html'));
+});
+
+app.get('/nosignin/homepage/rajasthan/stream5', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/2011RS.html'));
+});
+
+app.get('/nosignin/homepage/jk/stream1', function(req, res) {
+  // res.sendFile(path.join(__dirname, 'views/stream1.html'));
+  res.sendFile(path.join(__dirname, 'views/1971JK.html'));
+});
+
+app.get('/nosignin/homepage/jk/stream2', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/1981JK.html'));
+});
+
+app.get('/nosignin/homepage/jk/stream3', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/1991JK.html'));
+});
+
+app.get('/nosignin/homepage/jk/stream4', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/2001JK.html'));
+});
+
+app.get('/nosignin/homepage/jk/stream5', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views/2011JK.html'));
 });
 
 
