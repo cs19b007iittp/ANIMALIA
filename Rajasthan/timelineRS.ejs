@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ANIMALIA</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="/css/favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!--Bonus Button animation -->
+  <style media="screen">
+    .fcc-btn {
+      background-color: #6cd29f;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+    }
+    .fcc-btn:hover {
+      background-color: #223094;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main">
+
+    <div class="topnav">
+      <% if (check === 1) { %>
+        <p class="username">Hi, <%=user.name %></p>
+        <%} %>
+      <div class="topnav-right">
+        <a href="/nosignin/homepage">HOME</a>
+        <a target="_blank" href="/nosignin/homepage/andhra_pradesh/quiz">QUIZ</a>
+        <a target="_blank" href="/nosignin/homepage/andhra_pradesh/instructions">INSTRUCTIONS</a>
+      </div>
+    </div>
+
+
+    <img src="images/timelinebg2.jpg" alt="" class="timelineimage">
+    <h1>WELCOME TO RAJASTHAN WILDLIFE!</h1>
+
+  </div>
+
+  <!-- 5 time period display -->
+  <div class="container">
+
+    <div class="top-section">
+      <h1>Wildlife of Rajasthan </h1>
+      <p> Rajasthan is the heaven of the tigers and many endangered species.Well known already for the tiger, Rajasthan’s wildlife is as colourful and varied as its cultural heritage.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="line"></div>
+
+
+      <div class="section">
+        <div class="bead"></div>
+        <div class="content">
+          <h2>(1971 - 1981)</h2>
+          <p>The Rajasthan Forest Department manages forests in around 9.6% of the state area with the primary mandate to protect and conserve forest and wildlife wealth in the state.</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream1"> <button class="showmorebutton">Show me more!</button> </a>
+        </div>
+        <img src="images/animal_welfare.png" class="img-right">
+      </div>
+
+
+      <div class="section">
+        <div class="bead"></div>
+        <div class="content">
+          <h2>(1981 - 1991)</h2>
+          <p>Phulwari ki Nal Wildlife Sanctuary, Todgarh-Raoli Sanctuary, Sajjangarh Wildlife Sanctuary were started in this period.</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream2"> <button class="showmorebutton">Show me more!</button> </a>
+        </div>
+        <img src="images/forest-laws.png" class="img-left" style="width: 20%; height: 20%;">
+      </div>
+
+
+      <div class="section">
+        <div class="bead"></div>
+        <div class="content">
+          <h2>(1991 - 2001)</h2>
+          <p>Ranthambhore National Park is largest national part of Rajasthan infact in India Also.This national park have higest number of tiger which is famous world wide.</p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream3"> <button class="showmorebutton">Show me more!</button> </a>
+        </div>
+        <img src="images/animal-sanctuary.png" class="img-right">
+      </div>
+
+
+
+      <div class="section">
+        <div class="bead"></div>
+        <div class="content">
+          <h2>(2001 - 2011)</h2>
+          <p>There certainly are tigers shining bright, but there is also myriad other wildlife in Rajasthan, from birds to blue bulls to sloth bears. </p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream4"> <button class="showmorebutton">Show me more!</button> </a>
+        </div>
+        <img src="images/national-park.png" class="img-left" style="width: 20%; height: 20%;">
+      </div>
+
+
+
+      <div class="section">
+        <div class="bead"></div>
+        <div class="content">
+          <h2>(2011 - 2021)</h2>
+          <p>The Ramgarh Vishdhari Sanctuary in Rajasthan got the green signal from the NTCA or National Tiger Conservation Authority. The Ramgarh wildlife sanctuary is the country's 52nd tiger reserve. </p>
+          <br>
+          <a href="/nosignin/homepage/andhra_pradesh/stream5"> <button class="showmorebutton">Show me more!</button> </a>
+          <!-- class="fcc-btn" -->
+        </div>
+        <img src="images/forest-fire.png" class="img-right">
+      </div>
+
+
+
+
+    </div>
+  </div>
+<!-- Java Script file link -->
+  <script src="js/timeline.js"></script>
+</body>
+
+</html>
+
+<!-- FIXME: Some additional(empty) space in right -->
+<!-- TODO: Button CSS improvement -->
