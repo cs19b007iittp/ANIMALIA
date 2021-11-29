@@ -34,6 +34,9 @@
         <a href="/nosignin/homepage">HOME</a>
         <a target="_blank" href="/nosignin/homepage/andhra_pradesh/quiz">QUIZ</a>
         <a target="_blank" href="/nosignin/homepage/andhra_pradesh/instructions">INSTRUCTIONS</a>
+        <% if (check === 1) { %>
+        <a href="/" onclick="signOut();">SIGN OUT</a>
+        <% } %>
       </div>
     </div>
 
@@ -122,6 +125,14 @@
 
     </div>
   </div>
+  <script>
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function() {
+        console.log("User signed out.");
+      })
+    }
+  </script>
 <!-- Java Script file link -->
   <script src="js/timeline.js"></script>
 </body>
