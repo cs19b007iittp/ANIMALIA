@@ -261,7 +261,9 @@ app.get('/nosignin/homepage/jk/stream5', function(req, res) {
 // quiz redirection
 
 app.get('/nosignin/homepage/andhra_pradesh/quiz', function(req, res) {
-  res.sendFile(path.join(__dirname, 'views/quiz.html'));
+  res.render('quiz', {
+    check
+  });
   // res.sendFile(path.join(__dirname, 'views/test.html'));
 });
 
@@ -501,11 +503,7 @@ function getRandomInt(max) {
 
 
 app.listen(PORT, () => {
-  // console.log(`
-  //               Server running on port $ {
-  //                 PORT
-  //               }
-  //               `);
+  console.log(`Server running on port ${PORT}`);
 
-  console.log("Server started on port 3000.");
+  // console.log("Server started on port 3000.");
 })
