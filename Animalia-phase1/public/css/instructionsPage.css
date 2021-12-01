@@ -1,116 +1,42 @@
-html {
-  scroll-behavior: smooth; /*enables smooth scrolling*/
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  background-color: #A7C4BC; /*changing the background color*/
-  font-family: sans-serif;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-h1{
-	color: black;
-  letter-spacing: 5px; /*heading with 5px letter-spacing*/
-}
-
-.row {
+.section-container section {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-family: "Roboto", sans-serif;
 }
 
-#navbar {
-  text-align: center;
-  overflow-y: scroll;
-  height: 100vh; /*fixing the height of navbar*/
-  position: fixed; 
-  width: 400px;
+.section-container img {
+  width: 570px;
+  height: 350px;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-#navbar header {
-  padding: 20px 30px;
-  font-weight: 600;
-  border-bottom: 1px solid black;
-  color: black;
+.section-container section h2 {
+  font-size: 40px;
+  margin: 15px 0;
 }
 
-.nav-link {
-  text-decoration: none;
-  display: block;
-  padding: 20px 30px;
-  color: black; /*the color shown when not hovered is black*/
-  border-bottom: 1px solid black;
-}
-
-.nav-link:hover {
-  background-color: #2F5D62;
-  color: white; /*color becomes white upon hovering*/
-}
-
-#main-doc {
-  padding-left: 400px; /*adding left padding*/
-  width: 100%;
-}
-
-.main-section {
-  padding: 20px 30px;
-  max-width: 700px;
-  margin: 0 auto;
-  padding-bottom: 0px; /*adding bottom padding*/
-}
-
-.main-section header {
-  text-align: center; /*aligning text to center*/
+.section-container p {
   padding: 10px 0;
 }
 
-.main-section h1 {
-  font-size: 30px;
-  margin: 12px auto;
+.section-container .section-heading {
+  width: 400px;
+  text-align: center;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  margin-bottom: -25px;
 }
 
-.main-section p {
-  line-height: 1.6;
-  text-rendering: optimizelegibility;
-}
-
-.main-section li {
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-code {
-  margin: 10px auto;
-  padding: 20px 14px;
-  display: block;
-  background-color:#2F5D62; /*changing the color of the code block*/
-	color: white;
-  line-height: 2;
-  white-space: pre;
-  word-break: normal;
-  word-wrap: normal;
-  border-radius: 5px;
-  font-family: sans-serif;
-}
-
-@media only screen and (max-width: 815px) { /*taking care of the other screens of a different size*/
-  .row {
-    flex-direction: column;
-  }
-
-  #main-doc {
-    padding-left: 0;
-    padding-top: 25px;
-  }
-
-  #navbar {
-    height: 250px;
-    width: 100%;
-    position: static;
-  }
+.section-container .section-head {
+  width: 400px;
+  text-align: center;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  margin-bottom: -25px;
 }
