@@ -1,283 +1,75 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+body{
+    background-color: #00A8CC;
+/*     background-image: url("images/reward_bg.jpg"); */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-html {
-  scroll-behavior: smooth;
+.cards {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    grid-auto-rows: auto;
+    gap: 20px;
+    font-family: sans-serif;
+    padding-top: 30px;
 }
 
-body {
-  background: #f0d9ff;
+.cards * {
+    box-sizing: border-box;
 }
 
-section {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 100px;
-  color: #fff;
+.card__image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    border-top: 2px solid #333333;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
 }
 
-.container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.card__content {
+    line-height: 1.5;
+    font-size: 0.9em;
+    padding: 15px;
+    background: #fafafa;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
 }
 
-.content {
-  position: relative;
-  width: 1150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.card__content > p:first-of-type {
+    margin-top: 0;
 }
 
-.content .image {
-  position: relative;
-  width: 800px;
-  height: 400px;
-  overflow: hidden;
+.card__content > p:last-of-type {
+    margin-bottom: 0;
 }
 
-.content .image img {
-  z-index: 111;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+.card__info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555555;
+    background: #eeeeee;
+    font-size: 0.8em;
+    border-bottom: 2px solid #333333;
+    border-right: 2px solid #333333;
+    border-left: 2px solid #333333;
 }
 
-.content .text-box {
-  background: #bfa2db;
-  backdrop-filter: blur(20px);
-  padding: 40px;
-  max-width: 600px;
-  border: #3d087b;
-  border-radius: 10px;
-  transform: translate(-80px, 50px);
+.card__info i {
+    font-size: 0.9em;
+    margin-right: 8px;
 }
 
-.content .text-box h3 {
-  font-size: 2em;
-  margin-bottom: 10px;
+.card__link {
+    color: #64968c;
+    text-decoration: none;
 }
 
-.content .info h3 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.info {
-  width: 700px;
-  margin-left: 50px;
-  color: #4b3869;
-}
-
-.button {
-  padding: 7px 20px;
-  text-align: center;
-  display: inline-block;
-  font-size: 12px;
-  transition-duration: 0.1s;
-  background-color: #4b3869;
-  color: #f0d9ff;
-  border: #4b3869;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-.button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
-.content .info .button:hover {
-  background-color: #f0d9ff;
-  color: black;
-  border: 2px solid #4b3869;
-}
-
-.content .text-box .button:hover {
-  background-color: #bfa2db;
-  color: #4b3869;
-  border: 2px solid #4b3869;
-}
-
-.to-top {
-  background: white;
-  position: fixed;
-  bottom: 16px;
-  right: 32px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  color: #4b3869;
-  text-decoration: none;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s;
-}
-
-.to-top.active {
-  bottom: 32px;
-  pointer-events: auto;
-  opacity: 1;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #f4f4f4;
-  margin: 5% auto;
-  padding: 10px;
-  width: 70%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  animation-name: modalopen;
-  animation-duration: 2s;
-  color: #4b3869;
-}
-
-.modal-header h2,
-.modal-footer h3 {
-  margin: 0;
-}
-
-.modal-header {
-  background: #4b3869;
-  padding: 15px;
-  color: #fff;
-}
-
-.modal-body {
-  padding: 10px 20px;
-}
-
-.modal-footer {
-  background: #4b3869;
-  padding: 10px;
-  color: #fff;
-  text-align: center;
-}
-
-.closeBtn {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
-  color: #fff;
-}
-
-.closeBtn:hover,
-.closeBtn:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.closeBtn1 {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
-  color: #fff;
-}
-
-.closeBtn1:hover,
-.closeBtn1:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.closeBtn2 {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
-  color: #fff;
-}
-
-.closeBtn2:hover,
-.closeBtn2:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.closeBtn3 {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
-  color: #fff;
-}
-
-.closeBtn3:hover,
-.closeBtn3:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* For Tablet View */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .content{
-    width: 800px;
-  }
-}
-
-/* For Mobile Portrait View */
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
-  .content{
-    width: 400px;
-  }
-  .sec-01 .content{
-    padding-left: 100px;
-  }
-  .sec-03 .content{
-    padding-left: 100px;
-  }
-  .image{
-    display: none;
-  }
-}
-
-/* For Mobile Landscape View */
-@media screen and (max-device-width: 640px) and (orientation: landscape) {
-  .content{
-    width: 800px;
-  }
-}
-
-/* For Mobile Phones Portrait or Landscape View */
-@media screen and (max-device-width: 640px) {
-
+.card__link:hover {
+    text-decoration: underline;
 }
