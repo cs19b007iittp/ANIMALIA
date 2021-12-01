@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color:  #A7C4BC;
+      }
+      
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      #main {
+        transition: margin-left .5s;
+        padding: 16px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+  </head>
+  <body>
+
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#3D Image">3D Image</a>
+      <a href="#AR Image">AR Image</a>
+      <a href="#Desktop Angle">Desktop angle</a>
+      <a href="#Phone Angle">Phone angle</a>
+    </div>
+    
+    <div id="main">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+    
+
+    <div class="section-container">
+      <section id="3D Image">
+        <div class="section-heading">
+          <h2 data-aos="fade-left" data-aos-duration="1000" >3D Image</h2>
+        </div>
+        <p data-aos="fade" data-aos-duration="800" data-aos-delay="400" style="font-size:larger;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+          The 3D Image can be procured as a login bonus for signing in to the application.Simply use your mouse, drag and scroll.
+        </p>
+        
+        <img
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+          src="images/image1.jpg"
+          alt=""
+        />
+      </section>
+
+      <section id="AR Image">
+        <div class="section-heading">
+          <h2 data-aos="fade-up" data-aos-duration="1000">AR Image</h2>
+        </div>
+        <p data-aos="fade" data-aos-duration="800" data-aos-delay="400" style="font-size:larger;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+          Download the HIRO marker(download option available in ANIMLAIA too) , or simply take the screen shot of above
+        </p>
+        <img
+          data-aos="fade"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+          src="images/image2.jpg"
+          alt=""
+        />
+      </section>
+
+      <section id="Desktop Angle">
+        <div class="section-heading">
+          <h2 data-aos="fade-right" data-aos-duration="1000">Desktop angle</h2>
+        </div>
+        <p data-aos="fade" data-aos-duration="800" data-aos-delay="400">
+          Follow the below instructions step by step:</p>
+          <ul>
+            <li>Make sure there is less light from back of laptop.</li>
+            <li>If possibe face the camera with some light from the front(to get better focus)</li>
+            <li>Adjust the amgle to an acute one(60-70 degrees) between screen and laptop</li>
+            <li>Finally give permission to use your laptop front camera.</li>
+          </ul>
+        
+        <img
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+          src="images/image3.jpeg"
+          alt=""
+        />
+      </section>
+      <br>
+      <br>
+      <br>
+      <section id="Phone Angle">
+        <div class="section-heading">
+          <h2 data-aos="fade-right" data-aos-duration="1000">Phone angle</h2>
+        </div>
+        <p data-aos="fade" data-aos-duration="800" data-aos-delay="400">
+         Open Marker in your mobile Gallery,then follow these steps.</p>
+          <ul>
+            <li>Sit in an area where less sunlight hits your face(So that marker can be visible to laptop camera).</li>
+            <li>Now show your marker onto the screen. Try to place the phone on a flat surface like table and focus camera there.</li>
+          </ul>
+        
+        <img
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-delay="200"
+          src="images/image4.png"
+          alt=""
+        />
+      </section>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
+  </body>
+</html>
