@@ -22,7 +22,7 @@ NOTE: Sign in will work for heroku link only.(as we can only give google authent
 4. A quiz related to animals where questions are taken from an external API(for R1). For R2 planning to build a custom questionnaire. <br />
 5. Attempting Quiz gives access to exciting prices.
 <p float="left">
-<img src="https://user-images.githubusercontent.com/70932495/144448009-adc0daa4-10a2-4220-812e-0ab896e57b6f.png" height="300" width="450"/>
+<img src="https://user-images.githubusercontent.com/70932495/144448009-adc0daa4-10a2-4220-812e-0ab896e57b6f.png" height="300" width="450"/><br />
 <img src="https://user-images.githubusercontent.com/70932495/144449238-278b8188-4d09-49f0-9cc2-9d6a9cf89e4c.png" height="300" width="450"/>
 </p>
 6. You will be asked to download HIRO marker, which you can if you do not have it in your mobile.
